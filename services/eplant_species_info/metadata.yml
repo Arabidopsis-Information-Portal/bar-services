@@ -1,0 +1,35 @@
+---
+
+name: eplant_species_info
+version: 0.1
+description: Passthrough adapter for BAR ePlant species info
+type: passthrough
+url: https://bar.utoronto.ca/eplant/cgi-bin/speciesinfo.cgi
+whitelist:
+  - bar.utoronto.ca:
+      deny:
+        - Authorization
+      forward:
+        - Accept-Encoding
+        - Referer
+        - Origin
+        - accept
+icon: BAR.png
+tags:
+    - 'ePlant'
+    - 'species'
+
+authors:
+    - name: Erik Ferlanti
+      email: erik@jcvi.org
+      sponsor_organization: J. Craig Venter Institute
+      sponsor_uri: https://www.jcvi.org
+
+sources:
+    - title: ePlant
+      description: Combines several data visualization toosl to show natural connections between DNA sequences, natural variation, molecular structures, protein-protein interactions, and gene expression patterns
+      sponsor_organization_name: University of Toronto
+      sponsor_uri: https://www.utoronto.ca/
+      provider_name: Nicholas Provart
+      provider_email: nicholas.provart@utoronto.ca
+      uri: https://bar.utoronto.ca/eplant
